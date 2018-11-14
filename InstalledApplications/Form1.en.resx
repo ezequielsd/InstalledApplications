@@ -117,17 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 666</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>List</value>
-  </data>
-  <data name="btnLanguagePTbr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>604, 2</value>
-  </data>
-  <data name="btnLanguageEN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 2</value>
+  <data name="btnListarProgramasLocal.Text" xml:space="preserve">
+    <value>List installed programs</value>
   </data>
 </root>

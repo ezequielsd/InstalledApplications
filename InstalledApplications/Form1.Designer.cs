@@ -29,23 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnListarProgramasLocal = new System.Windows.Forms.Button();
             this.btnLanguagePTbr = new System.Windows.Forms.Button();
             this.btnLanguageEN = new System.Windows.Forms.Button();
+            this.listViewProgramas = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // checkedListBox1
+            // btnListarProgramasLocal
             // 
-            resources.ApplyResources(this.checkedListBox1, "checkedListBox1");
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Name = "checkedListBox1";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnListarProgramasLocal, "btnListarProgramasLocal");
+            this.btnListarProgramasLocal.Name = "btnListarProgramasLocal";
+            this.btnListarProgramasLocal.UseVisualStyleBackColor = true;
+            this.btnListarProgramasLocal.Click += new System.EventHandler(this.btnListarProgramasLocal_Click);
             // 
             // btnLanguagePTbr
             // 
@@ -63,26 +58,33 @@
             this.btnLanguageEN.UseVisualStyleBackColor = true;
             this.btnLanguageEN.Click += new System.EventHandler(this.btnLanguageEN_Click);
             // 
+            // listViewProgramas
+            // 
+            resources.ApplyResources(this.listViewProgramas, "listViewProgramas");
+            this.listViewProgramas.CheckBoxes = true;
+            this.listViewProgramas.Name = "listViewProgramas";
+            this.listViewProgramas.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listViewProgramas);
             this.Controls.Add(this.btnLanguagePTbr);
             this.Controls.Add(this.btnLanguageEN);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.btnListarProgramasLocal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnListarProgramasLocal;
         private System.Windows.Forms.Button btnLanguageEN;
         private System.Windows.Forms.Button btnLanguagePTbr;
+        private System.Windows.Forms.ListView listViewProgramas;
     }
 }
 
