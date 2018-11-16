@@ -29,7 +29,8 @@ namespace InstalledApplications
             AjustaIdioma(culturaAtual.Name);
             listViewProgramas.View = View.Details;
             listViewProgramas.Columns.Add("Programas", 500, HorizontalAlignment.Left);
-            listViewProgramas.Columns.Add("Versão", 120, HorizontalAlignment.Left);                    
+            listViewProgramas.Columns.Add("Versão", 120, HorizontalAlignment.Left);
+            AjustaIdiomaListView(culturaAtual.Name);
         }
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace InstalledApplications
         private void btnLanguagePTbr_Click(object sender, EventArgs e)
         {
             AjustaIdioma("pt-BR");
+            AjustaIdiomaListView("pt-BR");
         }
 
         /// <summary>
@@ -50,6 +52,7 @@ namespace InstalledApplications
         private void btnLanguageEN_Click(object sender, EventArgs e)
         {
             AjustaIdioma("en-US");
+            AjustaIdiomaListView("en-US");
         }
 
         /// <summary>
@@ -105,6 +108,27 @@ namespace InstalledApplications
             //Assembly.GetExecutingAssembly());
             //String strWebsite = rm.GetString("Website", CultureInfo.CurrentCulture);
             //String strName = rm.GetString("Name");
+        }
+
+        /// <summary>
+        /// Método ajusta o idioma do listview
+        /// </summary>
+        /// <param name="culturaName">Nome da cultura ativa na thread</param>
+        private void AjustaIdiomaListView(string culturaName)
+        {
+            switch (culturaName)
+            {
+                case "pt-BR":                  
+                    listViewProgramas.Columns[0].Text = "Programas";                    
+                    listViewProgramas.Columns[1].Text = "Versão";                  
+                    break;
+                case "en-US":
+                    listViewProgramas.Columns[0].Text = "Program";
+                    listViewProgramas.Columns[1].Text = "Version";                    
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

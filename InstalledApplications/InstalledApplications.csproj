@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_windows_291696.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -118,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_273_Ensign_Flag_Nation_kingdom_2634450 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="if_windows_291696.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
