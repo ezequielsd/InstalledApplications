@@ -28,8 +28,11 @@ namespace InstalledApplications
         {
             AjustaIdioma(culturaAtual.Name);
             listViewProgramas.View = View.Details;
-            listViewProgramas.Columns.Add("Programas", 500, HorizontalAlignment.Left);
-            listViewProgramas.Columns.Add("Versão", 120, HorizontalAlignment.Left);
+            listViewProgramas.Columns.Add("Programas", 400, HorizontalAlignment.Left);
+            listViewProgramas.Columns.Add("Editor", 200, HorizontalAlignment.Left);
+            listViewProgramas.Columns.Add("Data Instalacao", 120, HorizontalAlignment.Left);
+            listViewProgramas.Columns.Add("Versão", 130, HorizontalAlignment.Left);
+            listViewProgramas.Columns.Add("Local Instalacao", 500, HorizontalAlignment.Left);
             AjustaIdiomaListView(culturaAtual.Name);
         }
 
@@ -70,13 +73,17 @@ namespace InstalledApplications
         /// </summary>
         private void InsertItemsListView()
         {
-            var dados = RegistryFunctions.GetListApplicationsWin32();
-
+            var dados = RegistryFunctionsBLL.GetListAllApplications();
+         
             foreach (var dado in dados)
             {
                 ListViewItem item = new ListViewItem();
-                item.Text = dado.Name;                                            
-                item.SubItems.Add(dado.Version);
+               
+                item.Text = dado.DisplayName;                                            
+                item.SubItems.Add(dado.Publisher);
+                item.SubItems.Add(dado.InstallDate);
+                item.SubItems.Add(dado.DisplayVersion);
+                item.SubItems.Add(dado.InstallSource);
 
                 listViewProgramas.Items.Add(item);
             }
@@ -120,7 +127,10 @@ namespace InstalledApplications
             {
                 case "pt-BR":                  
                     listViewProgramas.Columns[0].Text = "Programas";                    
-                    listViewProgramas.Columns[1].Text = "Versão";                  
+                    listViewProgramas.Columns[1].Text = "Editor";
+                    listViewProgramas.Columns[2].Text = "Data Instalação";
+                    listViewProgramas.Columns[3].Text = "Versão";
+                    listViewProgramas.Columns[4].Text = "Local Instalacao";
                     break;
                 case "en-US":
                     listViewProgramas.Columns[0].Text = "Program";
