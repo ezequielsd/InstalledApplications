@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstalledApplications", "InstalledApplications\InstalledApplications.csproj", "{51EBD4F3-8FC5-4A21-8BD2-B810E9403DBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFSqlCe.Dal", "CFsqlCe.Dal\CFSqlCe.Dal.csproj", "{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{51EBD4F3-8FC5-4A21-8BD2-B810E9403DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51EBD4F3-8FC5-4A21-8BD2-B810E9403DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51EBD4F3-8FC5-4A21-8BD2-B810E9403DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
