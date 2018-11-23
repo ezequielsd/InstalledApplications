@@ -141,6 +141,12 @@
   <ItemGroup>
     <Content Include="if_windows_291696.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CFsqlCe.Dal\CFSqlCe.Dal.csproj">
+      <Project>{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}</Project>
+      <Name>CFSqlCe.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

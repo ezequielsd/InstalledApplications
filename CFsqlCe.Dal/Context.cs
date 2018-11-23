@@ -19,7 +19,7 @@ namespace CFSqlCe.Dal
                 db.Database.Initialize(false);
         }
                  
-        public DbSet<Aplicacao> Veiculos { get; set; }               
+        public DbSet<Aplicacao> Aplicacaos { get; set; }               
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Versao> Versoes { get; set; }        
     }
