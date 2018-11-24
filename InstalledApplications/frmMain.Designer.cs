@@ -1,6 +1,6 @@
 ﻿namespace InstalledApplications
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnListarProgramasLocal = new System.Windows.Forms.Button();
             this.btnLanguagePTbr = new System.Windows.Forms.Button();
             this.btnLanguageEN = new System.Windows.Forms.Button();
             this.listViewProgramas = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbProfile = new System.Windows.Forms.ComboBox();
+            this.btnCarregar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.chkSelecionarTudo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnListarProgramasLocal
@@ -71,17 +76,53 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // Form1
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // cmbProfile
+            // 
+            this.cmbProfile.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbProfile, "cmbProfile");
+            this.cmbProfile.Name = "cmbProfile";
+            // 
+            // btnCarregar
+            // 
+            resources.ApplyResources(this.btnCarregar, "btnCarregar");
+            this.btnCarregar.Name = "btnCarregar";
+            this.btnCarregar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // chkSelecionarTudo
+            // 
+            resources.ApplyResources(this.chkSelecionarTudo, "chkSelecionarTudo");
+            this.chkSelecionarTudo.Name = "chkSelecionarTudo";
+            this.chkSelecionarTudo.UseVisualStyleBackColor = true;
+            this.chkSelecionarTudo.CheckedChanged += new System.EventHandler(this.chkSelecionarTudo_CheckedChanged);
+            // 
+            // frmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chkSelecionarTudo);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnCarregar);
+            this.Controls.Add(this.cmbProfile);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewProgramas);
             this.Controls.Add(this.btnLanguagePTbr);
             this.Controls.Add(this.btnLanguageEN);
             this.Controls.Add(this.btnListarProgramasLocal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,6 +135,11 @@
         private System.Windows.Forms.Button btnLanguagePTbr;
         private System.Windows.Forms.ListView listViewProgramas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbProfile;
+        private System.Windows.Forms.Button btnCarregar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.CheckBox chkSelecionarTudo;
     }
 }
 

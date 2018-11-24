@@ -8,26 +8,24 @@ using System.Threading.Tasks;
 
 namespace InstalledApplications.BLL
 {
-    public class ProfileBLL
+    public static class ProfileBLL
     {
-        ProfileDAL dal = new ProfileDAL();
-
         /// <summary>
         /// Adiciona um novo profile
         /// </summary>
         /// <param name="profile"></param>
-        public void Criar(Profile profile)
+        public static void Criar(Profile profile)
         {
-            dal.Criar(profile);
+            new ProfileDAL().Criar(profile);
         }
 
         /// <summary>
         /// Returna a lista de profile riado
         /// </summary>
         /// <returns></returns>
-        public List<Profile> List()
+        public static List<Profile> List()
         {
-            return dal.List();
+            return new ProfileDAL().List();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CFSqlCe.Dal
         public string InstallSource { get; set; }
 
         [StringLength(500)]
-        public DateTime Publisher { get; set; }
+        public string Publisher { get; set; }
 
         public string ProfileId { get; set; }
 

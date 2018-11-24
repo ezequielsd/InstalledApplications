@@ -61,6 +61,24 @@ namespace InstalledApplications.Idiomas {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Saved profile.
+        /// </summary>
+        internal static string perfilSalvo {
+            get {
+                return ResourceManager.GetString("perfilSalvo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Profile saved successfully!.
+        /// </summary>
+        internal static string perfilSalvoSucesso {
+            get {
+                return ResourceManager.GetString("perfilSalvoSucesso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Programs.
         /// </summary>
         internal static string programas {
